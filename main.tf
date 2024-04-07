@@ -100,7 +100,7 @@ resource "aws_key_pair" "project-4-key" {
 # EC2 Instance Creation
 resource "aws_instance" "project-4" {
   ami                         = "ami-007020fd9c84e18c7"
-  instance_type               = "t2.nano"
+  instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.project-4-public-subnet.id
   key_name                    = aws_key_pair.project-4-key.id
   vpc_security_group_ids      = ["${aws_security_group.project-4-sc.id}"]
